@@ -217,8 +217,8 @@ main{
 #middle{
     width: 1340px;
     height: 650px;
-    background-color: cyan;
     display: flex;
+    justify-content: space-between;
 }
 
 #middle article:nth-child(1){
@@ -258,7 +258,7 @@ article h2{
 .card-main{
     max-width: auto;
     height: 210px; 
-    margin: 15px;  
+    margin: 17px 15px;  
     background: #FFFFFF;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -292,7 +292,6 @@ h3{
 .fa-star:last-child{
     color: #F2F2F2;
 }
-
 #middle article:nth-child(1) button{
     width: 130px;
     margin-left: 30px;
@@ -303,6 +302,51 @@ h3{
     line-height: 21px;
     color: #000000;
     border: none;
+}
+#middle article:nth-child(2){
+    width: 420px;
+    height: 650px;
+    background: #F2F2F2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#middle article:nth-child(2) div:nth-child(1){
+
+}
+.card-sponsored{
+    width: 343px;
+    margin: 17px 33px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    display: flex;
+}
+.card-sponsored img{
+    width: 137px;
+    height: 144px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 0px 0px 20px;
+}
+.card-sponsored div{
+    height: 153px;
+    display: flex;
+    flex-direction: column;
+}
+.card-sponsored h3{ 
+    max-width: 169px;
+    margin-top: 16px;
+}
+.card-sponsored p{
+    margin-top: 7px;
+    margin-left: 16px;
+    margin-bottom: 0px;
+}
+.card-sponsored span{
+    margin-left: 16px;
+}
+.card-sponsored i{
+    margin-bottom: 12px;
 }
 
 #bottom{
