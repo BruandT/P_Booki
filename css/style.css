@@ -5,10 +5,8 @@ body{
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;   
 }
-
 header{
     width: 1340px;
     height: 90px;
@@ -17,23 +15,19 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
 header>img{
     width: 61px;   
     height: 21px;
 }
-
 header nav{
     margin-right: 67px;
 }
-
 header nav ul{
     width: 240px;
     display: flex;
     flex-direction: row;
     list-style: none;
 }
-
 header a{
     color: #000000;
     font-style: normal;
@@ -43,16 +37,13 @@ header a{
     padding: 25px;
     border: 4px solid transparent;
 }
-
 header a:hover{
     color: #0065FC;
     border-top: 4px solid #0065FC;
 }
-
 a{
     text-decoration: none;
 }
-
 main{
     width: 1340px;
     display: flex;
@@ -170,8 +161,6 @@ main{
 #filtres button:hover{
     background-color: #DEEBFF;
 }
-
-
 .fa-money-bill-wave{
     color: #0065FC;
     font-size: 22px;
@@ -213,14 +202,12 @@ main{
     font-size: 10px;
     color: #0065FC;
 }
-
 #middle{
     width: 1340px;
     height: 650px;
     display: flex;
     justify-content: space-between;
 }
-
 #middle article:nth-child(1){
     width: 880px;
     height: 650px;
@@ -311,9 +298,6 @@ h3{
     display: flex;
     flex-direction: column;
 }
-#middle article:nth-child(2) div:nth-child(1){
-
-}
 .card-sponsored{
     width: 343px;
     margin: 17px 33px;
@@ -348,13 +332,82 @@ h3{
 .card-sponsored i{
     margin-bottom: 12px;
 }
-
 #bottom{
     width: 1340px;
     height: 495px;
-    background-color: yellow;
+    margin-top: 60px;
+}
+#bottom h2{
+    margin-top: 0;
+}
+#activity{
+    height: 445px;
+    display: flex;
+    justify-content: space-between;
+}
+.card-activity{
+    width: 300px;
+    height: 444px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card-activity img{
+    width: 300px;
+    height: 85%;
+    border-radius: 20px 20px 0 0;
+}
+.card-activity h3{
+    margin-top: 25px;    
+}
+footer{
+    width: 1340px;
+    height: 190px;
+    margin-top: 40px;
+    background-color: #F2F2F2;
+    display: flex;
+}
+footer div:nth-child(1){
+    margin-top: 40px;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+footer div:nth-child(2){
+    margin-top: 40px;
+    margin-left: 230px;
+    display: flex;
+    flex-direction: column;
+}
+footer div:nth-child(3){
+    margin-top: 40px;
+    margin-left: 240px;
+    display: flex;
+    flex-direction: column;
+}
+footer h4{
+    margin: 0px 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+footer ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer li {
+    margin-top: 15px;
+}
+footer a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
 }
 
-footer{
-    height: 190px;
-}
+
