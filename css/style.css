@@ -89,8 +89,8 @@ main{
     color: #FFFFFF;
 }
 #search input{
-    width: 12em;
-    height: 45px;
+    width: 200px;
+    height: 44px;
     padding-left: 15px;
     border: 1px solid #f2f2f2;
     font-style: normal;
@@ -100,8 +100,8 @@ main{
     color: #000000;
 }
 #search div{    
-    width: 45px;
-    height: 47px;
+    width: 44px;
+    height: 46px;
     background-color: #f2f2f2;    
     border: 1px solid #f2f2f2;
     border-radius: 15px 0px 0px 15px;
@@ -118,11 +118,13 @@ main{
 }
 #filtres{
     height: 100px;
+    margin-left: 20px;
     display: flex;
     align-items: center;
-    margin-left: 2em;
+    
 }
 #filtres h3{
+    margin: 0;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -182,6 +184,7 @@ main{
     margin-right: 1em;
 }
 #info{
+    margin-left: 20px;
     display: flex;
     align-items: center;
 }
@@ -196,7 +199,7 @@ main{
     justify-content: center;
 }
 #info p{
-    margin-top: 1em;
+    margin-top: 10px;
 }
 .fa-info{
     font-size: 10px;
@@ -226,6 +229,7 @@ h2{
 article h2{
     margin-left: 40px;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 #main-offers{
     width: 880px;
@@ -297,6 +301,17 @@ h3{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+}
+#popularity{
+    width: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-chart-line{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #0065FC;
 }
 .card-sponsored{
     width: 343px;
