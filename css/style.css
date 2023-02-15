@@ -1,29 +1,23 @@
 body{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 40px;
     font-family: 'Raleway', sans-serif;
     background: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
 }
 header{
-    width: 1340px;
+    width: 100%;
     height: 90px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-header>img{
+header img{
     width: 61px;   
     height: 21px;
 }
-header nav{
-    margin-right: 67px;
-}
 header nav ul{
-    width: 240px;
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -45,13 +39,13 @@ a{
     text-decoration: none;
 }
 main{
-    width: 1340px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #top{
-    width: 1340px;
+    width: 100%;
     height: 300px;
     margin-top: 10px;
 }
@@ -72,12 +66,18 @@ main{
     line-height: 19px;
 }
 #search{
+    width: 400px;
+    height: 46px;
     display: flex;
+    align-items: center;
+    background-color: #f2f2f2;    
+    border: 1px solid #f2f2f2;
+    border-radius: 15px 15px 15px 15px;
     
 }
 #search button{
     width: 132px;
-    height: 49px;
+    height: 48px;
     background: #0065FC;    
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
@@ -98,22 +98,12 @@ main{
     font-size: 18px;
     line-height: 21px;
     color: #000000;
-}
-#search div{    
-    width: 44px;
-    height: 46px;
-    background-color: #f2f2f2;    
-    border: 1px solid #f2f2f2;
-    border-radius: 15px 0px 0px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    outline: none;
 }
 .fa-location-dot{
     font-size: 17px;
-    padding-top: 2px;
-    padding-left: 5px;
+    padding-left: 18px;
+    padding-right: 17px;
     color: #000000;
 }
 #filtres{
@@ -132,20 +122,22 @@ main{
     color: #000000 ;
 }
 #filtres nav{
+    width: 100%;
     margin-left: 32px;
 }
 #filtres nav ul{
-    width: 1000px;
+    width: 100%;
     margin: 0;
     padding: 0; 
     display: flex;
     flex-direction: row;
-    list-style: none;
+    list-style: none; 
+    column-gap: 3%; 
 }
 #filtres button{
+    width: 100%;
     height: 48px;
-    padding: 4px 18px;
-    margin-right: 42px;
+    padding-right: 15px;
     background-color: transparent;
     border: 2px solid #D9D9D9;
     border-radius: 25px;
@@ -166,22 +158,22 @@ main{
 .fa-money-bill-wave{
     color: #0065FC;
     font-size: 22px;
-    margin-right: 1em;
+    padding: 0 13px;
 }
 .fa-person{
     color: #0065FC;
     font-size: 22px;
-    margin-right: 1em;
+    padding: 0 13px;
 }
 .fa-heart{
     color: #0065FC;
     font-size: 22px;
-    margin-right: 1em;
+    padding: 0 13px;
 }
 .fa-dog{
     color: #0065FC;
     font-size: 22px;
-    margin-right: 1em;
+    padding: 0 13px;
 }
 #info{
     margin-left: 20px;
@@ -199,57 +191,57 @@ main{
     justify-content: center;
 }
 #info p{
-    margin-top: 10px;
+    margin-top: 17px;
 }
 .fa-info{
     font-size: 10px;
     color: #0065FC;
 }
 #middle{
-    width: 1340px;
-    height: 650px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    column-gap: 3%;
 }
 #middle article:nth-child(1){
-    width: 880px;
-    height: 650px;
+    width:70%;
     background: #F2F2F2;
     border-radius: 20px;
     display: flex;
+    justify-content: center;
+}
+#accommodation{
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
     flex-direction: column;
+
 }
 h2{
+    margin-top: 0;    
+    margin-bottom: 25px;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
     color: #000000;
 }
-article h2{
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 0;
-}
 #main-offers{
-    width: 880px;
-    align-self: center;
-    justify-content: center;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
 }
 .img-card-main{
-    width: 235px;
-    max-width: 235px;
-    height: 110px;
+    height: 125px;
+    box-sizing: border-box;
     border: 5px solid #FFFFFF;
     border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
 }
 .card-main{
-    max-width: auto;
-    height: 210px; 
-    margin: 17px 15px;  
+    min-width: 30%;
     background: #FFFFFF;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -257,10 +249,15 @@ article h2{
     flex-direction: column;
     
 }
+.card-main div{ 
+    margin-left: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
 h3{
     margin: 0;
-    margin-top: 7px;
-    margin-left: 1em;
+    margin-top: 7px;    
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
@@ -269,11 +266,11 @@ h3{
 .card-main p{
     margin: 0;
     margin-top: 7px;
-    margin-left: 1em;
+    
 }
 .card-main span{
     margin: 0;
-    margin-left: 1em;
+    
 }
 .fa-star{
     margin-top: 10px;
@@ -283,40 +280,50 @@ h3{
 .fa-star:last-child{
     color: #F2F2F2;
 }
+article{
+}
 #middle article:nth-child(1) button{
-    width: 130px;
-    margin-left: 30px;
-    margin-top: 30px;
+    width: auto;
+    padding: 0;
+    margin-top: 50px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
     color: #000000;
     border: none;
+    text-align: start;
 }
 #middle article:nth-child(2){
-    width: 420px;
-    height: 650px;
+    width: 35%;
     background: #F2F2F2;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 #popularity{
-    width: 370px;
+    width: 80%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#header-popularity{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .fa-chart-line{
+    margin-bottom: 15px;
     font-size: 18px;
-    margin-top: 20px;
     color: #0065FC;
 }
 .card-sponsored{
-    width: 343px;
-    margin: 17px 33px;
+    width: 100%;
     background: #FFFFFF;
+    margin-bottom: 33px;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
     display: flex;
@@ -324,31 +331,31 @@ h3{
 .card-sponsored img{
     width: 137px;
     height: 144px;
+    box-sizing: border-box;
     border: 5px solid #FFFFFF;
     border-radius: 20px 0px 0px 20px;
+    object-fit: cover;
+}
+.card-sponsored-description{
+    height: 95%;
+    margin-left: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 .card-sponsored div{
-    height: 153px;
+    height: 153px auto;
     display: flex;
     flex-direction: column;
 }
 .card-sponsored h3{ 
     max-width: 169px;
-    margin-top: 16px;
 }
 .card-sponsored p{
     margin-top: 7px;
-    margin-left: 16px;
     margin-bottom: 0px;
 }
-.card-sponsored span{
-    margin-left: 16px;
-}
-.card-sponsored i{
-    margin-bottom: 12px;
-}
 #bottom{
-    width: 1340px;
+    width: 100%;
     height: 495px;
     margin-top: 60px;
 }
@@ -361,8 +368,8 @@ h3{
     justify-content: space-between;
 }
 .card-activity{
-    width: 300px;
-    height: 444px;
+    width: 22%;
+    height: 100%;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -370,40 +377,47 @@ h3{
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .card-activity img{
-    width: 300px;
+    width: 100%;
     height: 85%;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
 }
 .card-activity h3{
-    margin-top: 25px;    
+    margin-top: 21px; 
+    margin-left: 19px;   
 }
 footer{
-    width: 1340px;
+    width: 100%;
     height: 190px;
     margin-top: 40px;
     background-color: #F2F2F2;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer-container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
 }
 footer div:nth-child(1){
-    margin-top: 40px;
-    margin-left: 70px;
+    width: 35%;
     display: flex;
     flex-direction: column;
 }
 footer div:nth-child(2){
-    margin-top: 40px;
-    margin-left: 230px;
+    width: 33%;
     display: flex;
     flex-direction: column;
 }
 footer div:nth-child(3){
-    margin-top: 40px;
-    margin-left: 240px;
+    width: 32%;
     display: flex;
     flex-direction: column;
 }
 footer h4{
-    margin: 0px 0px;
+    margin: 0;
+    margin-bottom: 5px;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -416,7 +430,7 @@ footer ul{
     padding: 0;
 }
 footer li {
-    margin-top: 15px;
+    margin-top: 8px;
 }
 footer a{
     font-weight: 400;
