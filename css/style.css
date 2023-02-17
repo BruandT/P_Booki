@@ -29,7 +29,7 @@ header a{
     font-size: 16px;
     line-height: 19px;
     padding: 25px;
-    border: 4px solid transparent;
+    box-sizing: border-box;
 }
 header a:hover{
     color: #0065FC;
@@ -72,8 +72,7 @@ main{
     align-items: center;
     background-color: #f2f2f2;    
     border: 1px solid #f2f2f2;
-    border-radius: 15px 15px 15px 15px;
-    
+    border-radius: 15px 15px 15px 15px;    
 }
 #search button{
     width: 132px;
@@ -181,10 +180,10 @@ main{
     align-items: center;
 }
 #info div{
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     border: 1px solid #D9D9D9;
-    border-radius: 50%;
+    border-radius: 100%;
     margin-right: 11px;
     display: flex;
     align-items: center;
@@ -272,7 +271,7 @@ h3{
     margin: 0;
     
 }
-.fa-star{
+.card-main .fa-star{
     margin-top: 10px;
     font-size: 14px;
     color: #0065FC;
@@ -320,6 +319,7 @@ h3{
 }
 .card-sponsored{
     width: 100%;
+    height: 144px;
     background: #FFFFFF;
     margin-bottom: 33px;
     border-radius: 20px;
@@ -328,7 +328,6 @@ h3{
 }
 .card-sponsored img{
     width: 137px;
-    height: 144px;
     box-sizing: border-box;
     border: 5px solid #FFFFFF;
     border-radius: 20px 0px 0px 20px;
@@ -342,16 +341,27 @@ h3{
     justify-content: space-between;
 }
 .card-sponsored div{
-    height: 153px auto;
     display: flex;
     flex-direction: column;
 }
 .card-sponsored h3{ 
-    max-width: 169px;
+    max-width: 100%;
 }
 .card-sponsored p{
     margin-top: 7px;
     margin-bottom: 0px;
+}
+.card-sponsored-description .fa-star{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #0065FC;
+}
+.card-sponsored-description .fa-star:last-child{
+    color: #F2F2F2;
+}
+.card-sponsored-description span{
+    display: flex;
+    align-items: center;
 }
 #bottom{
     width: 100%;
@@ -384,10 +394,6 @@ h3{
     display: flex;
     align-items: center;
 }
-/* .card-activity h3{
-    margin-top: 15px; 
-    margin-left: 19px;   
-} */
 footer{
     width: 100%;
     height: 190px;
@@ -507,17 +513,15 @@ footer a{
     }
     .card-sponsored-description{
         margin-left: 10px;
+        margin-top: 10px;
         display: flex;
         justify-content: space-between;
-    }
-    .card-sponsored span{
-        margin-bottom: 7px;
     }
     .card-sponsored-top{
         width: 100%;
     }
     .card-sponsored h3{ 
-        width: 95%;
+        width: 80%;
         font-size: 14px;
     }
     .card-sponsored p{
@@ -539,9 +543,183 @@ footer a{
 @media ( max-width: 768px) {
 
     body{
-        background-color: yellow;
+        max-width: 768px;
+        padding: 0;
+    }
+    header{
+        margin-top: 21px;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    header nav {
+        width: 100%;
+    }
+    header nav ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    header nav li{
+        width: 100%;
+        display: flex;
+    }
+    header nav a {
+        width: 100%;
+        text-align: center;
     }
     
+    header nav a:hover{
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 4px solid #0065FC;
+    }
+    main{
+        display: flex;
+        align-items: center;
+    }
+    #top{
+        width: 90%;
+        height: auto;
+        margin-top: 30px;
+    }
+    #search{
+        max-width: 330px;
+        margin-top: 30px;
+        
+    }
+    #search input{
+        width: auto;
+    }
+    #search button{
+        width: auto;
+        height: 48px;
+    }
+    #search button:before {
+        content: "\f002";
+        font-family: "Font Awesome 5 Free";
+        font-size: 17px;
+        margin: 8px;
+    }
+      
+    #search button span {
+        display: none;
+    }
+    
+    #filtres{
+        height: auto;
+        margin-left: 0;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        align-items: start;
+        flex-direction: column;
+    }
+    #filtres h3{
+        margin-bottom: 15px;
+    }
+    #filtres nav{
+        width: 100%;
+        margin-left: 0;
+    }
+    #filtres nav ul{
+        width:100%;
+        flex-flow: row wrap;
+        list-style: none; 
+        gap: 15px; 
+    }
+    #filtres button{
+        width: 155px;
+        font-size: 11px;
+    }
+    .fa-money-bill-wave, .fa-person, .fa-heart, .fa-dog{
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    #info{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        align-items: flex-start;
+    }
+    #info p{
+        margin-top: 5px;
+    }
+    .fa-info{
+        font-size: 14px;
+    }
+    #middle{
+        flex-direction: column-reverse;
+    }
+    #middle article:nth-child(2){
+        width: 100%;
+        border-radius: 0;
+    }
+    #card-sponsored-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-sponsored{
+        width: 100%;
+    } 
+    .card-sponsored-description{
+        width: 60%;
+        flex-direction: column;
+    }   
+    .card-sponsored-description .fa-star{
+        margin-bottom: 15px;
+    } 
+    .card-sponsored h3{ 
+        font-size: 16px;
+    }
+    .card-sponsored p{
+        font-size: 14px;
+    }
+    #middle article:nth-child(1){
+        width: 100%;
+        background: none;
+        align-items: center;
+    }
+    .card-main{
+        width: 100%;
+    }
+    #middle article:nth-child(1) button{
+       display: none;
+    }
+    #bottom{
+        width: 90%;
+        margin-top: 0;
+        margin-bottom: 60px;
+    }
+    #bottom h2{
+        width: 50%;
+        margin: 0;
+    }
+    #activity{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .card-activity{
+        width: 100%;
+        height: 190px;
+    }
+    footer{
+        height: 100%;
+    }
+    #footer-container{
+        flex-direction: column;
+    }
+    footer div:nth-child(1){
+        width: 100%;
+        margin-top: 30px;        
+    }
+    footer div:nth-child(2){
+        width: 100%;        
+    }
+    footer div:nth-child(3){
+        width: 100%;        
+    }
+    footer ul{
+        margin-bottom: 40px;
+    }
 }
-
-
