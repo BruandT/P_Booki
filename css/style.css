@@ -196,6 +196,9 @@ main{
     font-size: 10px;
     color: #0065FC;
 }
+.card-zoom:hover{
+    transform: scale(1.1);
+}
 #middle{
     width: 100%;
     display: flex;
@@ -291,6 +294,7 @@ h3{
     border: none;
     text-align: start;
 }
+
 #middle article:nth-child(2){
     width: 35%;
     background: #F2F2F2;
