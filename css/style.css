@@ -224,6 +224,7 @@ h2{
     row-gap: 30px;
 }
 .img-card-main{
+    min-width: 240px;
     height: 125px;
     box-sizing: border-box;
     border: 5px solid #FFFFFF;
@@ -274,6 +275,8 @@ h3{
     padding: 0;
     margin-top: 50px;
     font-style: normal;
+    /* Background transparent pour Mozilla firefox */
+    background-color: transparent;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
@@ -376,13 +379,13 @@ h3{
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 .card-activity img{
-    height: 88%;
+    height: 388px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
 .card-activity-title{
-    height: 12%;
     margin-left: 18px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
 }
@@ -498,11 +501,16 @@ footer a{
     .card-sponsored p{
         font-size: 13px;
     }
+    .card-activity{
+        height: 100%;
+    }
     .card-activity img{
-        height: 80%;
+        max-height: 201px;
     }
     .card-activity-title{
         height: 20%;
+        margin-left: 18px;
+        padding: 10px 0;
     }
     #footer-container{
         width: 85%;
@@ -533,6 +541,7 @@ footer a{
     header nav a {
         width: 100%;
         text-align: center;
+        border-bottom: 4px solid #F2F2F2;
     }    
     header nav a:hover{
         border-top: none;
@@ -663,6 +672,9 @@ footer a{
     .a-card-activity{
         width: 100%;
         height: 190px;
+    }
+    .card-activity img{
+        height: 134px;
     }
     footer{
         height: 100%;
